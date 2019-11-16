@@ -6,11 +6,14 @@ from polar_codes.channels.bpsk_awgn_channel import BpskAwgnChannel
 
 def main():
     # First, we create an instance of underlying channel
+    # チャネルの作成
     channel = BpskAwgnChannel(-1.0)
 
     # Second, we define basic parameters of code: a codeword length and number of informational bits.
+    # 符号長と情報ビット数を決める
     # Then, we create an instance of code. We use construction method based on polar weights, since
     # it seems to be optimal. Also, we pass an instance of channel to the code and set length of CRC to 8 bits
+    # コードのインスタンスの作成。極の重みに基づいた方法で構成する。8bit のCRCをセットする。
     n = 8
     K = 115
     code = PolarCode(n=n, K=K, construction_method='PW', channel=channel, CRC_len=16)
