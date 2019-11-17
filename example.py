@@ -14,6 +14,9 @@ def main():
     # Then, we create an instance of code. We use construction method based on polar weights, since
     # it seems to be optimal. Also, we pass an instance of channel to the code and set length of CRC to 8 bits
     # コードのインスタンスの作成。極の重みに基づいた方法で構成する。8bit のCRCをセットする。
+    #
+    # てすとおおおおおおおおおおおおおおお
+    #
     n = 8
     K = 115
     code = PolarCode(n=n, K=K, construction_method='PW', channel=channel, CRC_len=16)
